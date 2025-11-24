@@ -320,14 +320,14 @@ const ProjectsAndGallery = () => {
         <div className="flex flex-col justify-center">
           <div className="flex items-center gap-3 mb-6">
              <span className="px-3 py-1 bg-yellow-500/10 border border-yellow-500/30 rounded-full text-yellow-500 text-xs font-mono uppercase tracking-widest flex items-center gap-2">
-               <Code2 size={14} /> Indie Developer (个人独立开发)
+               <Code2 size={14} /> Indie Developer & AI
              </span>
              <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-xs font-mono uppercase tracking-widest flex items-center gap-2">
-               <Rocket size={14} /> Commercialized
+               <Rocket size={14} /> 基于Gemini个人开发
              </span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight font-['Antonio'] text-yellow-600 uppercase">
-            AI Sunset Guide
+            AI Sun Guide
           </h2>
           <h3 className="text-xl md:text-2xl font-bold text-white mb-4 font-['Noto_Sans_SC'] border-l-4 border-yellow-500 pl-4">
             日出日落指南小程序
