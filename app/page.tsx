@@ -19,7 +19,7 @@ const EXPERIENCE = [
     highlights: [
       "构建企业级 AI Agent 中台：集成 DeepResearch 与 RAG 深度搜索，打破数据孤岛，支持复杂业务意图识别与 Text-to-SQL 自动生成。",
       "落地“AI+数字员工”体系：融合 ASR/TTS/NLP 与 Unity 3D 数字人技术，打造 7x24 小时智能业务助手，覆盖客服与办公全场景。",
-      "构建自动化 Workflow 生态：通过 Agent 编排实现会议纪要生成、合同智能撰写与审批流自动化，显著提升企业协同效率 40%+。",
+      "构建自动化 Workflow 生态：通过 Agent 编排实现会议纪要生成、合同智能撰写与审批流自动化，显著提升企业协同效率 40%。",
       "设计商业化闭环：建立 Token 分层计费与配额管理体系，成功将内部 AI 能力转化为可量化的商业服务产品（SaaS化）。"
     ],
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop" 
@@ -273,7 +273,7 @@ const ExperienceCard = ({ item, index, isLast }: { item: any, index: number, isL
 
 // --- NEW COMPONENT: Projects and Gallery with QR Code AND Dashboard ---
 const ProjectsAndGallery = () => {
-  // Use the uploaded image filename
+  // Use the uploaded image filename, referencing from public folder
   const qrCodeImage = "/image_c5bb5d.png"; 
   
   const stats = [
@@ -323,11 +323,11 @@ const ProjectsAndGallery = () => {
                <Code2 size={14} /> Indie Developer & AI
              </span>
              <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-xs font-mono uppercase tracking-widest flex items-center gap-2">
-               <Rocket size={14} /> 基于Gemini个人开发
+               <Rocket size={14} /> 基于GEMINI开发的个人AI项目
              </span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight font-['Antonio'] text-yellow-600 uppercase">
-            AI Sun Guide
+            AI Sunset Guide
           </h2>
           <h3 className="text-xl md:text-2xl font-bold text-white mb-4 font-['Noto_Sans_SC'] border-l-4 border-yellow-500 pl-4">
             日出日落指南小程序
