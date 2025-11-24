@@ -19,7 +19,7 @@ const EXPERIENCE = [
     highlights: [
       "构建企业级 AI Agent 中台：集成 DeepResearch 与 RAG 深度搜索，打破数据孤岛，支持复杂业务意图识别与 Text-to-SQL 自动生成。",
       "落地“AI+数字员工”体系：融合 ASR/TTS/NLP 与 Unity 3D 数字人技术，打造 7x24 小时智能业务助手，覆盖客服与办公全场景。",
-      "构建自动化 Workflow 生态：通过 Agent 编排实现会议纪要生成、合同智能撰写与审批流自动化，显著提升企业协同效率 40%。",
+      "构建自动化 Workflow 生态：通过 Agent 编排实现会议纪要生成、合同智能撰写与审批流自动化，显著提升企业协同效率 40%+。",
       "设计商业化闭环：建立 Token 分层计费与配额管理体系，成功将内部 AI 能力转化为可量化的商业服务产品（SaaS化）。"
     ],
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop" 
@@ -263,7 +263,8 @@ const ExperienceCard = ({ item, index, isLast }: { item: any, index: number, isL
           <div><h2 className="text-2xl md:text-5xl font-bold tracking-tight text-yellow-50 font-['Antonio'] uppercase break-words">{item.company}</h2><p className="text-base md:text-2xl text-yellow-500 font-['Antonio'] mt-2 flex items-start gap-2 break-words"><span className="mt-1 shrink-0">{index === 0 ? <Bot size={20} /> : <Brain size={20} />}</span><span className="leading-tight">{item.role}</span></p></div>
           <span className="text-xs md:text-lg font-mono text-white/50 mt-2 md:mt-0 bg-white/5 px-3 py-1 rounded border border-white/5 shrink-0">{item.period}</span>
         </div>
-        <p className="text-sm md:text-lg leading-relaxed text-gray-300 font-light mb-6 italic border-l-2 border-yellow-500 pl-4 shrink-0">"{item.desc}"</p>
+        {/* 修复点：使用 HTML 转义字符 &quot; 替代直接的双引号 */}
+        <p className="text-sm md:text-lg leading-relaxed text-gray-300 font-light mb-6 italic border-l-2 border-yellow-500 pl-4 shrink-0">&quot;{item.desc}&quot;</p>
         <div className="grid grid-cols-1 gap-3 pb-4">{item.highlights.map((point: string, i: number) => (<div key={i} className="flex items-start group p-2 hover:bg-white/5 rounded-lg transition-colors"><div className="w-1.5 h-1.5 bg-yellow-500 rounded-full mt-1.5 mr-3 group-hover:scale-150 transition-transform shrink-0" /><p className="text-sm md:text-base text-gray-200 font-['Noto_Sans_SC'] group-hover:text-white transition-colors leading-relaxed">{point}</p></div>))}</div>
       </motion.div>
       <SideNavHint targetId={nextTarget} label={nextLabel} />
@@ -320,10 +321,10 @@ const ProjectsAndGallery = () => {
         <div className="flex flex-col justify-center">
           <div className="flex items-center gap-3 mb-6">
              <span className="px-3 py-1 bg-yellow-500/10 border border-yellow-500/30 rounded-full text-yellow-500 text-xs font-mono uppercase tracking-widest flex items-center gap-2">
-               <Code2 size={14} /> Indie Developer & AI
+               <Code2 size={14} /> Indie Developer (个人独立开发)
              </span>
              <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-xs font-mono uppercase tracking-widest flex items-center gap-2">
-               <Rocket size={14} /> 基于GEMINI开发的个人AI项目
+               <Rocket size={14} /> Commercialized
              </span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight font-['Antonio'] text-yellow-600 uppercase">
@@ -391,6 +392,7 @@ const ProjectsAndGallery = () => {
                 src={qrCodeImage} 
                 alt="Mini Program QR" 
                 className="w-48 h-48 md:w-64 md:h-64 object-contain" 
+                // Fallback if local image is not found in public folder
                 onError={(e) => {e.currentTarget.src="https://via.placeholder.com/300x300.png?text=QR+Code"}}
               />
             </div>
