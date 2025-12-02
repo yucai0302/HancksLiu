@@ -32,7 +32,7 @@ const EXPERIENCE = [
     desc: "负责全球内容生态策略，构建“生成-理解-分发”的 AIGC 闭环，主导安全风控与商业化变现。",
     highlights: [
       "构建智能问答 Agent：覆盖 20+ 语种，日均处理 5000+ 查询，减少外包人力投入 70%",
-      "打造中东社交机器人：基于用户画像定制 Prompt，提升付费转化率与用户留存",
+      "打造中东社交机器人：基于用户画像定制 Prompt，提升付费转化率与用户留存 -- 作为项目产品参与Google Best of 2023大会",
       "搭建新闻热点 AIGC 链路：实现全自动爬取、清洗与生成，内容生产效率提升 95%",
       "升级安全风控体系：未成年账号识别率达 98.2%，恋童癖模型准确率提升 25%"
     ],
@@ -278,9 +278,9 @@ const ProjectsAndGallery = () => {
   const qrCodeImage = "/image_c5bb5d.png"; 
   
   const stats = [
-    { label: "累计用户", value: "3,778", icon: Users, trend: "+3.53%", trendColor: "text-green-500" },
-    { label: "日访问人数", value: "21", icon: TrendingUp, trend: "+61.53%", trendColor: "text-green-500" },
-    { label: "日打开次数", value: "30", icon: Eye, trend: "+50%", trendColor: "text-green-500" },
+    { label: "累计用户", value: "4,078", icon: Users, trend: "+3.53%", trendColor: "text-green-500" },
+    { label: "日访问人数", value: "31", icon: TrendingUp, trend: "+61.53%", trendColor: "text-green-500" },
+    { label: "日打开次数", value: "50", icon: Eye, trend: "+50%", trendColor: "text-green-500" },
     { label: "日访问页面", value: "107", icon: Clock, trend: "+98.14%", trendColor: "text-green-500" },
   ];
 
